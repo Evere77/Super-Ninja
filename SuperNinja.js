@@ -6,7 +6,7 @@ class Ninja {
     this.strength = 3;
   }
   sayName() {
-    console.log(this.name);
+    console.log(`My name is ${this.name}`);
   }
   showStats() {
     console.log(`Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`);
@@ -34,12 +34,13 @@ class Sensei extends Ninja {
   speakWisdom(){
     console.log("Words of wisdom: What up?");
     super.drinkSake();
-    console.log()
+  }
+  showStats() {
+    super.showStats();
   }
 }
 
 
 const superSensei = new Sensei("Master Splinter");
 superSensei.speakWisdom();
-
 superSensei.showStats();
